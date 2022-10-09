@@ -1,14 +1,22 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import api from './api';
+import LinhaDeFilmes from './components/LinhaDeFilmes';
 
 
 function App() {
+
+    const[listaFilmes, setFilmesLista] = useState([]);
+
+
+
+
 
     useEffect(() => {
 
         const carregarTudo = async () => {
             let list = await api.pegandoLista();
             console.log(list);
+            setFilmesLista(list);
         }
 
         carregarTudo();
@@ -17,7 +25,15 @@ function App() {
 
     return (
         <div className="App">
-            olá mundo
+            <section className='listas'>
+                {listaFilmes.map((item, key)=>(
+                    <div>
+                        <LinhaDeFilmes key={key} title={item.title} items={item.items}/>
+
+                      
+                    </div>
+                ))}
+            </section>
         </div>
     );
 }
