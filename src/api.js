@@ -15,9 +15,9 @@ export default {
             {
                 slug: 'originais',
                 titles: 'origanais do netflix',
-                items: await basicoFech(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_CHAVE}`)
+                items: await basicoFech(`/discover/tv?with_networks=213&language=pt-BR&api_key=${API_CHAVE}`)
             },
-            
+
             {
                 slug: "trending",
                 titles: "recomendados para você",
