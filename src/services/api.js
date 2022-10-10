@@ -61,5 +61,26 @@ export default {
 
 
         ];
+    },
+    pegarInfoDosFilmes: async (movieId, type) => {
+        let info = {};
+
+        if (movieId) {
+            switch (type) {
+                case 'movie':
+                    info = await basicoFech(`/movie/${movieId}?language=pt-BR&api_key=${API_CHAVE}`);
+                    break;
+
+                case 'tv':
+                    info = await basicoFech(`/tv/${movieId}?language=pt-BR&api_key=${API_CHAVE}`);
+                    break;
+                default:
+                    info = null;
+                    break;
+            }
+        }
+        return info;
+
+
     }
 }
