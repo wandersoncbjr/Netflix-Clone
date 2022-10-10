@@ -1,0 +1,40 @@
+
+
+/* movieRow */
+.card-filmes{
+    margin-bottom: 30px;
+}
+
+.card-filmes h2{
+    margin: 0px 0px 0px 30px;
+}
+
+/* movieRow lista area */
+.aréa-lista{
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+
+.fileira-filmes{
+    width: 99999px;
+}
+
+.imagem{
+display: inline-block;
+width: 150px;
+cursor: pointer;
+
+}
+
+.imagem img{
+    width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.3s;
+}
+
+.imagem img:hover{
+    transform: scale(1);
+}
+
+
+
