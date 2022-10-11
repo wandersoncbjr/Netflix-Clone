@@ -14,13 +14,13 @@ export default {
         return [
             {
                 slug: 'originais',
-                titles: 'origanais do netflix',
+                titles: 'Origanais do Netflix',
                 items: await basicoFech(`/discover/tv?with_networks=213&language=pt-BR&api_key=${API_CHAVE}`)
             },
 
             {
                 slug: "trending",
-                titles: "recomendados para você",
+                titles: "Recomendados para você",
                 items: await basicoFech(`/trending/all/week?language=pt-BR&api_key=${API_CHAVE}`)
             },
             {
@@ -31,19 +31,19 @@ export default {
 
             {
                 slug: "action",
-                titles: "ação",
+                titles: "Ação",
                 items: await basicoFech(`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_CHAVE}`)
             },
 
             {
                 slug: "comedy",
-                titles: "comédia",
+                titles: "Comédia",
                 items: await basicoFech(`/discover/movie?with_genres=35&language=pt-BR&api_key=${API_CHAVE}`)
             },
 
             {
                 slug: "horror",
-                titles: "terror",
+                titles: "Terror",
                 items: await basicoFech(`/discover/movie?with_genres=27&language=pt-BR&api_key=${API_CHAVE}`)
             },
 
@@ -54,10 +54,9 @@ export default {
             },
             {
                 slug: "documentary",
-                titles: "documentários",
+                titles: "Documentários",
                 items: await basicoFech(`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_CHAVE}`)
             }
-
 
 
         ];
@@ -80,7 +79,6 @@ export default {
             }
         }
         return info;
-
 
     }
 }
