@@ -3,6 +3,8 @@ import api from './services/api';
 import LinhaDeFilmes from './components/LinhaDeFilmes';
 import './App.css';
 import FilmeEmDestaques from './components/FilmeEmDestaques';
+import Header from './components/Header';
+
 
 function App() {
 
@@ -26,7 +28,7 @@ function App() {
 
     return (
         <div className="App">
-
+            <Header/>
             {dadosDoDestaques &&
                 <FilmeEmDestaques item={dadosDoDestaques} />}
             <section className='listas'>
