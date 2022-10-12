@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import api from './services/api';
 import LinhaDeFilmes from './components/LinhaDeFilmes';
 import './App.css';
@@ -10,6 +10,7 @@ function App() {
 
     const [listaFilmes, setFilmesLista] = useState([]);
     const [dadosDoDestaques, setDadosDoDestaques] = useState(null);
+    const [HeaderPreto, setHeaderPreto] = useState(false);
 
     useEffect(() => {
         const carregarTudo = async () => {
@@ -26,9 +27,25 @@ function App() {
         carregarTudo();
     }, []);
 
+    useEffect(()=>{
+        const scrollListener = () =>{
+            if(window.scrollY > 10){
+                setHeaderPreto(true)
+            }
+
+            else(setHeaderPreto(false))
+
+        }
+
+        window.addEventListener('scroll', scrollListener)
+        return () => {
+            window.removeEventListener('scroll', scrollListener)
+        }
+    },[]);
+
     return (
         <div className="App">
-            <Header/>
+            <Header preto={HeaderPreto}/>
             {dadosDoDestaques &&
                 <FilmeEmDestaques item={dadosDoDestaques} />}
             <section className='listas'>
