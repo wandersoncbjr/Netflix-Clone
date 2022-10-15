@@ -10,6 +10,11 @@ export default ({ item }) => {
         generos.push(item.genres[i].name)
     };
 
+    let descricao = item.overview;
+    if (descricao.length > 200) {
+        descricao = descricao.substring(0, 200) + '...';
+
+    }
     return (
 
         <section className="destaque" style={{
@@ -25,7 +30,7 @@ export default ({ item }) => {
                         <div className="data"> {primeiraData.getFullYear()} </div>
                         <div className="temporadas">{item.number_of_seasons} Temporada{item.number_of_seasons !== 1 ? 's' : ' '}</div>
                     </div>
-                    <div className="informações-filmes">{item.overview}</div>
+                    <div className="informações-filmes">{descricao}</div>
                     <div className="botoes">
                         <a href={`/watch/${item.id}`} className="botao-1">▶ Assistir</a>
                         <a href={`/list/add/${item.id}`} className="botao-2"> + Minha Lista</a>
