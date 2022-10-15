@@ -7,6 +7,8 @@ import Header from './components/Header';
 import Footer from './components/Footer'
 
 
+
+
 function App() {
 
     const [listaFilmes, setFilmesLista] = useState([]);
@@ -28,13 +30,13 @@ function App() {
         carregarTudo();
     }, []);
 
-    useEffect(()=>{
-        const scrollListener = () =>{
-            if(window.scrollY > 10){
+    useEffect(() => {
+        const scrollListener = () => {
+            if (window.scrollY > 10) {
                 setHeaderPreto(true)
             }
 
-            else(setHeaderPreto(false))
+            else (setHeaderPreto(false))
 
         }
 
@@ -42,11 +44,11 @@ function App() {
         return () => {
             window.removeEventListener('scroll', scrollListener)
         }
-    },[]);
+    }, []);
 
     return (
         <div className="App">
-            <Header preto={HeaderPreto}/>
+            <Header preto={HeaderPreto} />
             {dadosDoDestaques &&
                 <FilmeEmDestaques item={dadosDoDestaques} />}
             <section className='listas'>
@@ -56,7 +58,12 @@ function App() {
                     </div>
                 ))}
             </section>
-            <Footer/>
+            <Footer />
+            {listaFilmes.length <= 0 &&
+                <div className="loading">
+                    <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" />
+
+                </div>}
         </div>
     );
 }
