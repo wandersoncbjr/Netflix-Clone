@@ -13,7 +13,7 @@
 
 .fileira-filmes {
     transition: all ease 0.5s;
-   
+
 }
 
 .imagem {
@@ -59,6 +59,14 @@
 }
 
 .card-filmes:hover .iconEsquerda,
-.card-filmes:hover .iconDireita{
+.card-filmes:hover .iconDireita {
     opacity: 1;
+}
+
+@media (max-width: 760px) {
+
+    .iconEsquerda,
+    .iconDireita {
+        opacity: 1;
+    }
 }
