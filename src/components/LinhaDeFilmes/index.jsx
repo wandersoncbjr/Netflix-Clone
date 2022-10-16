@@ -5,7 +5,7 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 
 export default ({ title, items, key }) => {
-    const [scrollx, setScrollx] = useState(-400);
+    const [scrollx, setScrollx] = useState(0);
     const setinhaEsquerda = () => {
         let x = scrollx + Math.round(window.innerWidth / 2);
         if (x > 0) {

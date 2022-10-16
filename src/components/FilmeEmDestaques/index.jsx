@@ -11,10 +11,18 @@ export default ({ item }) => {
     };
 
     let descricao = item.overview;
-    if (descricao.length > 200) {
-        descricao = descricao.substring(0, 200) + '...';
+    if (descricao.length > 190) {
+        descricao = descricao.substring(0, 190) + '...';
 
     }
+
+    let pontos = item.vote_average + " ";
+    if (pontos.length > 2) {
+        pontos = pontos.substring(0, 3);
+
+    }
+
+    console.log(pontos + "aaaa")
     return (
 
         <section className="destaque" style={{
@@ -26,7 +34,7 @@ export default ({ item }) => {
                 <div className="div-horizontal">
                     <div className="nome">{item.name}</div>
                     <div className="informações">
-                        <div className="pontos">{item.vote_average} pontos </div>
+                        <div className="pontos">{pontos} pontos </div>
                         <div className="data"> {primeiraData.getFullYear()} </div>
                         <div className="temporadas">{item.number_of_seasons} Temporada{item.number_of_seasons !== 1 ? 's' : ' '}</div>
                     </div>
