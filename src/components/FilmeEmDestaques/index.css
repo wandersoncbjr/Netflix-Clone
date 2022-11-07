@@ -22,7 +22,7 @@
 }
 
 .nome {
-    font-size: 60px;
+    font-size: 55px;
     font-weight: bold;
 }
 
@@ -96,21 +96,30 @@
         height: 90vh;
     }
 
+    .div-horizontal{
+        padding-bottom:120;
+    }
+
     .nome {
-        font-size: 7vw;
+        font-size: 5vw;
+        margin-top: 3vw;
     }
 
     .informações-filmes {
         font-weight: 16px;
         font-size: 4vw;
+        position: relative;
+       
+       
 
         
     }
+    
 
     .informações {
         font-size: 14px;
         max-width: 100vh;
-        margin-right: 30px;
+        
     }
 
     .botao-1,
@@ -120,5 +129,11 @@
 
     .generos {
         font-size: 14px;
+        margin-block-end: 1.1rem;
+    }
+
+    .botoes{
+      
+
     }
 }
