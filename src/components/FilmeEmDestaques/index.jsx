@@ -11,8 +11,8 @@ export default ({ item }) => {
     };
 
     let descricao = item.overview;
-    if (descricao.length > 190) {
-        descricao = descricao.substring(0, 190) + '...';
+    if (descricao.length > 150) {
+        descricao = descricao.substring(0, 170) + '...';
 
     }
 
