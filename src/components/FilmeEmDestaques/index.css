@@ -97,11 +97,14 @@
     }
 
     .nome {
-        font-size: 40px;
+        font-size: 7vw;
     }
 
     .informações-filmes {
         font-weight: 16px;
+        font-size: 4vw;
+
+        
     }
 
     .informações {
