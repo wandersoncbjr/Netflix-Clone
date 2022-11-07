@@ -4,7 +4,8 @@ import LinhaDeFilmes from './components/LinhaDeFilmes';
 import './App.css';
 import FilmeEmDestaques from './components/FilmeEmDestaques';
 import Header from './components/Header';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import load from './load.gif'
 
 
 
@@ -61,7 +62,7 @@ function App() {
             <Footer />
             {listaFilmes.length <= 0 &&
                 <div className="loading">
-                    <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" />
+                    <img src={load}/>
 
                 </div>}
         </div>
